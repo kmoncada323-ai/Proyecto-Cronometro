@@ -91,7 +91,7 @@
   const updateStatusDisplay = (id, isRunning, isDone) => {
     const statusEl = domRefs.statusSpans[id];
     if (isDone) {
-      statusEl.textContent = 'Completado';
+      statusEl.textContent = 'En pausa';
     } else if (isRunning) {
       statusEl.textContent = 'Ejecutándose';
     } else {
