@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cronómetros Simultáneos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="app-header">
+    <h1 class="app-title">Cronómetros</h1>
+    <p class="app-subtitle">Tres temporizadores independientes, un solo control</p>
+  </header>
+
+  <main class="timers-grid" id="timers-container">
+
+    <article class="timer-card" data-timer-id="0">
+      <div class="timer-label">Cronómetro 01</div>
+      <div class="timer-display">
+        <span class="timer-elapsed" id="elapsed-0">00</span>
+        <span class="timer-separator">/</span>
+        <span class="timer-target" id="target-display-0">--</span>
+        <span class="timer-unit">s</span>
+      </div>
+      <div class="timer-bar-wrapper">
+        <div class="timer-bar" id="bar-0"></div>
+      </div>
+      <div class="timer-status" id="status-0">En pausa</div>
+      <div class="timer-input-group">
+        <label for="input-0" class="input-label">Duración (segundos)</label>
+        <input
+          type="number"
+          id="input-0"
+          class="timer-input"
+          placeholder="ej. 30"
+          min="1"
+          step="1"
+        />
+        <span class="input-error" id="error-0"></span>
+      </div>
+    </article>
+
+    <article class="timer-card" data-timer-id="1">
+      <div class="timer-label">Cronómetro 02</div>
+      <div class="timer-display">
+        <span class="timer-elapsed" id="elapsed-1">00</span>
+        <span class="timer-separator">/</span>
+        <span class="timer-target" id="target-display-1">--</span>
+        <span class="timer-unit">s</span>
+      </div>
+      <div class="timer-bar-wrapper">
+        <div class="timer-bar" id="bar-1"></div>
+      </div>
+      <div class="timer-status" id="status-1">En pausa</div>
+      <div class="timer-input-group">
+        <label for="input-1" class="input-label">Duración (segundos)</label>
+        <input
+          type="number"
+          id="input-1"
+          class="timer-input"
+          placeholder="ej. 60"
+          min="1"
+          step="1"
+        />
+        <span class="input-error" id="error-1"></span>
+      </div>
+    </article>
+
+    <article class="timer-card" data-timer-id="2">
+      <div class="timer-label">Cronómetro 03</div>
+      <div class="timer-display">
+        <span class="timer-elapsed" id="elapsed-2">00</span>
+        <span class="timer-separator">/</span>
+        <span class="timer-target" id="target-display-2">--</span>
+        <span class="timer-unit">s</span>
+      </div>
+      <div class="timer-bar-wrapper">
+        <div class="timer-bar" id="bar-2"></div>
+      </div>
+      <div class="timer-status" id="status-2">En pausa</div>
+      <div class="timer-input-group">
+        <label for="input-2" class="input-label">Duración (segundos)</label>
+        <input
+          type="number"
+          id="input-2"
+          class="timer-input"
+          placeholder="ej. 90"
+          min="1"
+          step="1"
+        />
+        <span class="input-error" id="error-2"></span>
+      </div>
+    </article>
+
+  </main>
+
+  <footer class="controls-footer">
+    <button class="btn btn-play" id="btn-play" aria-label="Iniciar todos los cronómetros">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+      Play
+    </button>
+    <button class="btn btn-pause" id="btn-pause" aria-label="Pausar todos los cronómetros">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+      Pause
+    </button>
+    <button class="btn btn-reset" id="btn-reset" aria-label="Reiniciar todos los cronómetros">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/></svg>
+      Reset
+    </button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
